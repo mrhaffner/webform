@@ -9,23 +9,28 @@
 <body>
     <header>New User Sign Up</header>
     <form>
-        <input type=text id="username" name="username" placeholder="username" required pattern="">
+        <input type=text id="username" name="username" placeholder="username" autocomplete="off" 
+        required pattern="^[a-z0-9]{5,12}$">
     </form>
-    <label>Username must be a and contain 5 - 12 characters</label>
+    <label>Username must be alphanumeric and contain 5 - 12 characters</label>
     <form>
-        <input type=text id="email" name="email" placeholder="email" required pattern="">
+        <input type=text id="email" name="email" placeholder="email" autocomplete="off" 
+        required pattern="^\w*@\w*.(com|net|org|edu)$">
     </form>
     <label>Email must be a valid address, e.g. me@mydomain.com</label>
     <form>
-        <input type=text id="password" name="password" placeholder="password" required pattern="">
+        <input type="password" id="password" name="password" placeholder="password" autocomplete="off" 
+        required pattern="^[\w@-]{8,20}$">
     </form>
     <label>Password must be alphanumeric (@, _ and - are also allowed) and be 8 - 20 characters</label>
     <form>
-        <input type=text id="telephone" name="telephone" placeholder="telephone" required pattern="">
+        <input type=text id="telephone" name="telephone" placeholder="telephone" autocomplete="off" 
+        required pattern="\d{11}$">
     </form>
     <label>Telephone must be a valid UK telephone number (11 digits)</label>
     <form>
-        <input type=text id="slug" name="slug" placeholder="profile slug" required pattern="">
+        <input type=text id="slug" name="slug" placeholder="profile slug" autocomplete="off" 
+        required pattern="^[a-z0-9-]{8,20}$">
     </form>
     <label>Slug must contain only lowercase letters, numbers and hyphens and be 8 - 20 characters</label>
 </body>
